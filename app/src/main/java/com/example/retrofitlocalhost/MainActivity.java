@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity implements Callback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.textView); textView.setText("");
+        textView = findViewById(R.id.textView);
 
         retrofit = new Retrofit.Builder().baseUrl(Api.URL)
                 .addConverterFactory(GsonConverterFactory.create())

@@ -31,7 +31,7 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         viewHolder.sName.setText(studentsJsons.get(i).getDisplayName());
         viewHolder.sMobile.setText(studentsJsons.get(i).getMobile());
-        viewHolder.sAddress.setText(studentsJsons.get(i).getDisplayName());
+        viewHolder.sAddress.setText(studentsJsons.get(i).getAddress());
     }
 
     @Override

@@ -27,6 +27,11 @@ public interface Api {
     Call<ArrayList<StudentsJson>> getStudentsList();
 
 
+//    @GET("getdata.php/")
+//    Call<ArrayList<StudentsJson>> getStudentsList();
+
+
+
 }
 
 
