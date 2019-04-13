@@ -22,13 +22,10 @@ public interface Api {
 
     String URL = "http://10.0.2.2/";
 
-    // Single Json Object
-    @GET("students.php/")
-    Call getStudent();
-
     // List Of Json object
     @GET("students.php/")
     Call<ArrayList<StudentsJson>> getStudentsList();
+
 
 }
 

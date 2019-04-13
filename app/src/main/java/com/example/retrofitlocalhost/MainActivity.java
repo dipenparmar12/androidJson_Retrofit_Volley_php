@@ -2,13 +2,18 @@ package com.example.retrofitlocalhost;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Adapter;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
+import java.util.List;
 
 import retrofit2.Callback;
 import retrofit2.Call;
@@ -21,10 +26,17 @@ public class MainActivity extends AppCompatActivity implements Callback {
     TextView textView;
     final String TAG = "dipen";
 
+
     Api api;
     Call<ArrayList<StudentsJson>> callStudents;
     Retrofit retrofit;
 
+
+
+    RecyclerView recyclerView;
+    RecyclerView.Adapter adapter;
+
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,9 +62,17 @@ public class MainActivity extends AppCompatActivity implements Callback {
 
         ArrayList<StudentsJson> studentsJsons = (ArrayList<StudentsJson>) response.body();
 
-        for(StudentsJson studentJson: studentsJsons){
-            textView.append(studentJson.getDisplayName()+"\n");
-        }
+
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+
+        adapter = new StudentAdapter(this, studentsJsons );
+        recyclerView.setAdapter(adapter);
+
+
+//        for(StudentsJson studentJson: studentsJsons){
+//            textView.append(studentJson.getDisplayName()+"\n");
+//        }
 
     }
 
