@@ -1,47 +1,57 @@
 package com.example.retrofitlocalhost;
 
 
-//---------------------
-//   TODO---Json Data Holder Class
-//---------------------
-
-//TODO:1 Json Data Holder Object/Class
-//TODO:2 File > ProejctStructure > app > Dependencies > { 1. google.Gson , 2. Retrofit2, 3.retrofit Converter (Gson) }
-//TODO:3 Json Fields/ Varialbes Getter and Construtor
 
 
-//---------------------
-//  TODO--- Api Class
-//---------------------
+import android.content.Context;
+import android.support.annotation.NonNull;
+import android.support.v7.widget.RecyclerView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
-//TODO:3 Json Fields/ Varialbes Getter and Construtor
-//TODO:4 Follow TODO:2.2 Steps
+import java.util.ArrayList;
 
+public  class StudentAdapter_ extends RecyclerView.Adapter<StudentAdapter_.ViewHolder> {
 
-//---------------------
-//  TODO--- MainActivity
-//---------------------
-//TODO:5 Follow TODO:2.3 Steps
-//TODO:5.1  Inisilize 3 Main Objects ( 1.Api, 2.Call, 3.Retrofit )
-//TODO:6 Check Response Data
+    ArrayList<StudentsJson_> studentsJson_;
+    Context context;
 
+    public StudentAdapter_(ArrayList<StudentsJson_> studentsJson_, Context context) {
+        this.studentsJson_ = studentsJson_;
+        this.context = context;
+    }
 
-//---------------------
-//  TODO--- MainActiviy List Layout (RecylerView)
-//---------------------
-//TODO:7 Create Basic Layout
+    @NonNull
+    @Override
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.student_info_layout,viewGroup,false);
+        return new ViewHolder(v);
+    }
 
-//---------------------
-//  TODO--- CardLayout_
-//---------------------
-//TODO:8 List item Layout
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
+        viewHolder.name.setText(studentsJson_.get(i).getName());
+        viewHolder.mobile.setText(studentsJson_.get(i).getMobile());
+        viewHolder.address.setText(studentsJson_.get(i).getAddress());
+    }
 
-//---------------------
-//  TODO--- StudentAdapter_
-//---------------------
-//TODO:
+    @Override
+    public int getItemCount() {
+        return studentsJson_.size();
+    }
 
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
-public  class StudentAdapter_ {
+        TextView name,mobile,address;
+        public ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            name = itemView.findViewById(R.id.textView5);
+            mobile= itemView.findViewById(R.id.textView6);
+            address= itemView.findViewById(R.id.textView7);
+
+        }
+    }
 
 }

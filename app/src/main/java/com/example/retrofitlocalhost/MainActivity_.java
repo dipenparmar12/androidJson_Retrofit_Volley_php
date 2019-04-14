@@ -2,8 +2,9 @@ package com.example.retrofitlocalhost;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -12,6 +13,38 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
+
+//---------------------
+//   TODO---Json Data Holder Class
+//---------------------
+
+//TODO:1 Json Data Holder Object/Class
+//TODO:2 File > ProejctStructure > app > Dependencies > { 1. google.Gson , 2. Retrofit2, 3.retrofit Converter (Gson) }
+//TODO:3 Json Fields/ Varialbes Getter and Construtor
+
+//---------------------
+//  TODO--- Api Class
+//---------------------
+//TODO:3 Json Fields/ Varialbes Getter and Construtor
+//TODO:4 Follow TODO:2.2 Steps
+
+//---------------------
+//  TODO--- MainActivity
+//---------------------
+//TODO:5 Follow TODO:2.3 Steps
+//TODO:5.1  Inisilize 3 Main Objects ( 1.Api, 2.Call, 3.Retrofit )
+//TODO:6 Check Response Data
+
+//TODO:7 Create Basic Layout
+//TODO:8 List item Layout
+
+//---------------------
+//  TODO--- StudentAdapter_
+//---------------------
+//TODO:9 extends RecyclerView.Adapter<StudentAdapter_.ViewHolder>
+
+//TODO:10 set RecyclerView Layout By Cusome Adapter
+
 
 public class MainActivity_ extends AppCompatActivity implements Callback<ArrayList<StudentsJson_>> {
 
@@ -37,14 +70,16 @@ public class MainActivity_ extends AppCompatActivity implements Callback<ArrayLi
     @Override
     public void onResponse(Call<ArrayList<StudentsJson_>> call, Response<ArrayList<StudentsJson_>> response) {
         Log.e("dipen", "onResponse: "+response.body() );
-        TextView textView = findViewById(R.id.textView);
-        textView.setText("");
 
-        for(StudentsJson_ student: response.body()){
-            textView.append(student.getName()+"\n");
-        }
-        
+        RecyclerView recyclerView =  findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        RecyclerView.Adapter customeAdapter;
+        customeAdapter = new StudentAdapter_(response.body(),getApplicationContext());
+        recyclerView.setAdapter(customeAdapter);
 
+//        for(StudentsJson_ student: response.body()){
+//            (student.getName()+"\n");
+//        }
     }
 
     @Override
@@ -52,3 +87,5 @@ public class MainActivity_ extends AppCompatActivity implements Callback<ArrayLi
         Log.e("dipen", "onFailure: "+t.toString() );
     }
 }
+
+
