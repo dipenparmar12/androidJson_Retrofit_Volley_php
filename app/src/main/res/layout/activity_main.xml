@@ -4,80 +4,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:orientation="horizontal"
+    android:gravity="center"
     tools:context=".MainActivity">
 
-    <!--<LinearLayout-->
-    <!--android:layout_width="300dp"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:layout_marginTop="100dp"-->
-    <!--android:layout_weight="1"-->
-    <!--android:orientation="vertical">-->
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
 
-    <!--<TextView-->
-    <!--android:id="@+id/textView3"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:gravity="center"-->
-    <!--android:text="Select Record"-->
-    <!--android:textColor="@color/colorPrimary"-->
-    <!--android:textSize="20dp" />-->
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:textSize="20dp"
+            android:gravity="center"
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Select Record" />
 
-    <!--<Spinner-->
-    <!--android:id="@+id/spinner2"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content" />-->
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
-    <!--<Button-->
-    <!--android:id="@+id/button8"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:layout_marginBottom="60dp"-->
-    <!--android:text="Seelct" />-->
+        <Button
+            android:id="@+id/button8"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="60dp"
+            android:text="Seelct" />
 
-    <!--<TextView-->
-    <!--android:id="@+id/textView2"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:gravity="center"-->
-    <!--android:text="Inser Record"-->
-    <!--android:textColor="@color/colorPrimary"-->
-    <!--android:textSize="20dp" />-->
-
-
-    <!--<EditText-->
-    <!--android:id="@+id/editText3"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:ems="10"-->
-    <!--android:hint="Name"-->
-    <!--android:inputType="textPersonName" />-->
-
-    <!--<EditText-->
-    <!--android:id="@+id/editText2"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:ems="10"-->
-    <!--android:hint="Address"-->
-    <!--android:inputType="textPersonName" />-->
-
-    <!--<Button-->
-    <!--android:id="@+id/button9"-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:text="insert" />-->
-    <!--</LinearLayout>-->
+        <TextView
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Inser Record" />
 
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Student List"
-        android:padding="10dp"
-        android:textColor="@color/colorAccent"
-        android:textSize="35dp" />
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:hint="Address" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="insert" />
+    </LinearLayout>
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/recyclerView"
