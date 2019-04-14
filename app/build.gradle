@@ -25,9 +25,17 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    // Gson
-    implementation 'com.google.code.gson:gson:2.8.5'
-    // Retrofit
-    //    implementation 'com.squareup.retrofit2:converter-gson:2.2.0'
-    implementation 'com.squareup.retrofit2:retrofit:2.5.0'
+
+    implementation 'com.squareup.retrofit2:retrofit:2.5.0' //retrofit2
+    implementation 'com.google.code.gson:gson:2.8.5' // gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0' // converter-gson
 }
+
+
+//// Gson
+//implementation'com.google.code.gson:gson:2.8.5'
+//// retrofit2
+//implementation'com.squareup.retrofit2:retrofit:2.5.0'
+//// GsonConverterFactory.create()
+//implementation'com.squareup.retrofit2:retrofit-converters:2.5.0'
+//implementation'com.squareup.retrofit2:converter-gson:2.5.0'
