@@ -5,15 +5,12 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.Adapter;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 
 import java.util.ArrayList;
-import java.util.List;
+
 
 import retrofit2.Callback;
 import retrofit2.Call;
@@ -23,9 +20,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class MainActivity extends AppCompatActivity implements Callback {
 
-    TextView textView;
     final String TAG = "dipen";
-
 
     Api api;
     Call<ArrayList<StudentsJson>> callStudents;
@@ -42,7 +37,6 @@ public class MainActivity extends AppCompatActivity implements Callback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textView = findViewById(R.id.textView);
 
         retrofit = new Retrofit.Builder().baseUrl(Api.URL)
                 .addConverterFactory(GsonConverterFactory.create())

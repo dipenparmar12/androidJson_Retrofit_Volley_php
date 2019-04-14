@@ -27,7 +27,6 @@ public interface Api {
     Call<ArrayList<StudentsJson>> getStudentsList();
 
 
-
 }
 
 
