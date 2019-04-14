@@ -28,7 +28,9 @@ dependencies {
 
     implementation 'com.squareup.retrofit2:retrofit:2.5.0' //retrofit2
     implementation 'com.google.code.gson:gson:2.8.5' // gson
-    implementation 'com.squareup.retrofit2:converter-gson:2.5.0' // converter-gson
+    implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:recyclerview-v7:28.0.0'// converter-gson
 }
 
 

@@ -1,36 +1,5 @@
 package com.example.retrofitlocalhost;
 
-//---------------------
-//   TODO---Json Data Holder Class
-//---------------------
-
-//TODO:1 Json Data Holder Object/Class
-//TODO:2 File > ProejctStructure > app > Dependencies > { 1. google.Gson , 2. Retrofit2, 3.retrofit Converter (Gson) }
-//TODO:3 Json Fields/ Varialbes Getter and Construtor
-
-
-//---------------------
-//  TODO--- Api Class
-//---------------------
-
-//TODO:3 Json Fields/ Varialbes Getter and Construtor
-//TODO:4 Follow TODO:2.2 Steps
-
-
-//---------------------
-//  TODO--- MainActivity
-//---------------------
-//TODO:5 Follow TODO:2.3 Steps
-//TODO:5.1  Inisilize 3 Main Objects ( 1.Api, 2.Call, 3.Retrofit )
-//TODO:6
-
-//TODO implementation 'com.google.code.gson:gson:2.8.5'
-//TODO implementation 'com.squareup.retrofit2:retrofit:2.5.0'
-//TODO implementation 'com.squareup.retrofit2:converter-gson:2.5.0'
-//TODO implementation 'com.android.support:recyclerview-v7:28.0.0'
-//TODO implementation 'com.android.support:cardview-v7:28.0.0'
-
-
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -74,7 +43,7 @@ public class MainActivity_ extends AppCompatActivity implements Callback<ArrayLi
         for(StudentsJson_ student: response.body()){
             textView.append(student.getName()+"\n");
         }
-
+        
 
     }
 
