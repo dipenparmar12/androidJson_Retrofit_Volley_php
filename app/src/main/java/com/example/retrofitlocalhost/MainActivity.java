@@ -6,7 +6,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.widget.ProgressBar;
-import android.widget.TextView;
 
 
 import java.util.ArrayList;

@@ -27,6 +27,13 @@ public interface Api {
     Call<ArrayList<StudentsJson>> getStudentsList();
 
 
+    @GET("sql.php?opration=select")
+    Call<ArrayList<StudentsJson>> getStudentById(@Query("id") String id);
+
+
+    @GET("sql.php?opration=select")
+    Call<ArrayList<StudentsJson>> getAllStudents(@Query("opration") String opration);
+
 }
 
 
@@ -67,3 +74,7 @@ public interface Api {
 ////    Call<ArrayList<GitUserDetailJson>> getReposBySearchPara(@Path("SearchQry") String SearchQry);
 //
 //}
+
+//
+//    @GET("group/{id}/users")
+//    Call<List<User>> groupList(@Path("id") int groupId, @Query("sort") String sort);
