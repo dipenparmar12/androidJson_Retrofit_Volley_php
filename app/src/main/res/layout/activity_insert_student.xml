@@ -31,7 +31,7 @@
             android:layout_height="wrap_content" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/btn_select_id"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
