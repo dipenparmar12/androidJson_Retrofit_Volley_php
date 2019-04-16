@@ -1,4 +1,4 @@
-package com.example.retrofitlocalhost;
+package com.example.androidvolley;
 
 
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 public class StudentsJson {
 
     @SerializedName("id")
-    int id;
+    String id;
 
     @SerializedName("name")
     String displayName;
@@ -31,7 +31,7 @@ public class StudentsJson {
                 '}';
     }
 
-    public StudentsJson(int id, String displayName, String address, String mobile, String value) {
+    public StudentsJson(String id, String displayName, String address, String mobile, String value) {
         this.id = id;
         this.displayName = displayName;
         this.address = address;
@@ -43,7 +43,7 @@ public class StudentsJson {
         return value;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

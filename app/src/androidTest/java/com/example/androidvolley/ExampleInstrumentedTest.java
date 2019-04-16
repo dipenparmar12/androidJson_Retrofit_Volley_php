@@ -1,4 +1,4 @@
-package com.example.retrofitlocalhost;
+package com.example.androidvolley;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.retrofitlocalhost", appContext.getPackageName());
+        assertEquals("com.example.androidvolley", appContext.getPackageName());
     }
 }
